@@ -1,10 +1,10 @@
 import "./assets/styles/globals.scss";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Toaster } from 'sonner';
 import Header from '@/widgets/header';
 import Footer from "@/entities/footer";
 import Providers from '@/shared/providers';
-import { Toaster } from 'sonner';
 
 const inter = Inter({ subsets: ["latin"], variable: '--font' });
 

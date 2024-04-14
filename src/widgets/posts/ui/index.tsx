@@ -22,7 +22,7 @@ const Posts = async ({ searchParams }: { searchParams: ISearchParams }) => {
 
   const totalPages = Math.ceil((count || 1) / POSTS_PER_PAGE);
 
-  posts.sort((a, b) => {
+  posts?.sort((a, b) => {
     if (posts.length > 2) {
       switch (searchParams!.sort) {
         case 'asc':
@@ -45,7 +45,7 @@ const Posts = async ({ searchParams }: { searchParams: ISearchParams }) => {
     <section className={styles.posts}>
       <div className={styles.postsHeadline}>
         <h2>All blog posts</h2>
-        {posts.length > 2 && <Sort searchParams={searchParams} />}
+        {posts?.length > 2 && <Sort searchParams={searchParams} />}
         <Link href="/create-post">
           <CreatePostButton>
             Create new post
