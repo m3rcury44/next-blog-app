@@ -1,0 +1,12 @@
+.blogGreetings {
+  font-size: 12vw;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  border-color: var(--text-color);
+  color: var(--text-color);
+  width: 100%;
+  display: block;
+  text-align: center;
+  font-weight: 600;
+  transition: border-color var(--transition), color var(--transition);
+}

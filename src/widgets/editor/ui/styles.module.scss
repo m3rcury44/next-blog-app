@@ -1,0 +1,117 @@
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  label {
+    width: max-content;
+
+    input {
+      display: none;
+    }
+
+    span {
+      cursor: pointer;
+      display: block;
+      background-color: var(--text-color);
+      color: var(--background-color);
+      transition: background-color var(--transition), color var(--transition);
+    }
+  }
+
+  span {
+    padding: 10px 20px;
+  }
+
+  span, button {
+    border-radius: 12px;
+    font-weight: 600;
+  }
+
+  button {
+    background-color: var(--red);
+    color: #fff;
+
+    &:first-child {
+
+    }
+  }
+}
+
+.buttons ~ img {
+  display: block;
+  margin: 40px auto;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.inputs {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 20px;
+
+  input {
+    padding-block: 20px;
+    background-color: transparent;
+    font-weight: 600;
+    width: 100%;
+    color: var(--text-color);
+    transition: color var(--transition);
+
+    &::placeholder {
+      color: var(--text-color);
+    }
+
+    &:first-child {
+      font-size: 48px;
+    }
+
+    &:last-child {
+      font-size: 24px;
+      color: hwb(0 50% 50%);
+
+      &::placeholder {
+        color: hwb(0 50% 50%);
+      }
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .inputs {
+    input {
+      &:first-child {
+        font-size: 32px;
+      }
+
+      &:last-child {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 490px) {
+  .buttons {
+    label + button {
+      padding: 0;
+      height: 30px;
+      width: 30px;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' fill='%23de1e1e'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Crect x='0' fill='none' width='24' height='24'%3E%3C/rect%3E%3Cg%3E%3Cpath d='M20.587 3.423L22 4.837 20 6.84V18c0 1.105-.895 2-2 2H6.84l-2.007 2.006-1.414-1.414 17.167-17.17zM12.42 14.42l1 1 1-1c.63-.504 1.536-.456 2.11.11L18 16V8.84l-5.58 5.58zM15.16 6H6v6.38l2.19-2.19 1.39 1.39L4 17.163V6c0-1.105.895-2 2-2h11.162l-2 2z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/svg%3E") no-repeat;
+
+      p {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .buttons {
+    span {
+      padding-inline: 10px;
+    }
+  }
+}

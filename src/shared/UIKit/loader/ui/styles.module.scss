@@ -1,0 +1,19 @@
+.loader {
+  display: block;
+  height: 100px;
+  width: 100px;
+  border: 4px solid;
+  border-color: transparent transparent var(--text-color) transparent;
+  animation: rotate 0.5s infinite forwards;
+  border-radius: 50%;
+}
+
+@keyframes rotate {
+  0% {
+    rotate: 0;
+  }
+
+  100% {
+    rotate: 360deg;
+  }
+}

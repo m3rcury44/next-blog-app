@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+  position: relative;
+}
+
+@media (max-width: 1140px) {
+  .header {
+    gap: 0;
+
+    > nav {
+      display: none;
+    }
+
+    > div:not(:has(aside)) {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .header {
+    display: grid;
+    gap: 20px;
+  }
+}

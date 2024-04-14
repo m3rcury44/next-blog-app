@@ -1,0 +1,21 @@
+.footer {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    li {
+      font-size: 20px;
+      color: var(--text-color);
+      transition: color var(--transition);
+
+      a {
+        color: inherit;
+        transition: none;
+      }
+    }
+  }
+}

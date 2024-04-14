@@ -1,0 +1,20 @@
+.button {
+  display: block;
+  background-color: var(--green);
+  border-radius: 12px;
+  font-weight: 600;
+  color: #fff;
+  transition: background-color var(--transition);
+}
+
+@media (hover: hover) {
+  .button:hover {
+    background-color: #058339;
+  }
+}
+
+@media (hover: none) {
+  .button:active {
+    background-color: #058339;
+  }
+}

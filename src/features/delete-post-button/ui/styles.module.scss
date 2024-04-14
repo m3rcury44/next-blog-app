@@ -1,0 +1,19 @@
+.deletePostButton {
+  background-color: var(--red);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 12px;
+}
+
+@media (max-width: 690px) {
+  .deletePostButton {
+    padding: 0;
+    height: 30px;
+    width: 30px;
+    background: transparent url("data:image/svg+xml,%3Csvg fill='%23de1e1e' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cpath d='M5.755,20.283,4,8H20L18.245,20.283A2,2,0,0,1,16.265,22H7.735A2,2,0,0,1,5.755,20.283ZM21,4H16V3a1,1,0,0,0-1-1H9A1,1,0,0,0,8,3V4H3A1,1,0,0,0,3,6H21a1,1,0,0,0,0-2Z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E") no-repeat !important;
+
+    p {
+      display: none;
+    }
+  }
+}

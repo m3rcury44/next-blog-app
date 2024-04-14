@@ -1,0 +1,37 @@
+.switchTheme {
+  display: flex;
+  gap: 15px;
+  border-radius: 29px;
+  background: var(--text-color);
+  transition: background-color var(--transition);
+  padding: 8px 16px;
+  animation-delay: -1s;
+  animation: fade-in .3s backwards;
+
+  button {
+    height: 24px;
+    width: 24px;
+
+    path {
+      fill: var(--background-color);
+      transition: fill var(--transition);
+    }
+
+    &:last-child {
+      path {
+        stroke: var(--background-color);
+        transition: stroke var(--transition);
+      }
+    }
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

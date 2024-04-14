@@ -1,0 +1,100 @@
+.sort {
+  margin: 5px 0 0 20px;
+
+  div:not(.sortButtons) {
+    position: absolute;
+    width: max-content;
+    z-index: 2;
+    display: grid;
+    background-color: var(--text-color);
+    padding: 10px;
+    border-radius: 12px;
+
+    button {
+      color: var(--background-color);
+      font-weight: 600;
+      padding: 10px;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid gray;
+      }
+    }
+  }
+}
+
+.sortButtons, .sortButtons button {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.sortButtons {
+  button {
+    color: var(--input-text-color);
+    padding: 0;
+    font-weight: 600;
+
+    svg {
+      transition: rotate .2s ease-in-out;
+    }
+
+    path {
+      fill: var(--text-color);
+      transition: fill .2s ease-in-out;
+    }
+
+    &:not(:first-child) {
+      color: var(--text-color);
+    }
+  }
+}
+
+.fadeIn {
+  animation: fade-in .2s ease-in;
+  translate: 0 10px;
+}
+
+.fadeOut {
+  animation: fade-out .2s ease-in forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    visibility: hidden;
+    translate: 0 -10px;
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+    translate: 0 10px;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    translate: 0 10px;
+  }
+
+  to {
+    opacity: 0;
+    visibility: hidden;
+    translate: 0 -10px;
+  }
+}
+
+@media (max-width: 790px) {
+  .sort {
+    margin: 0;
+  }
+}
+
+@media (max-width: 350px) {
+  .sortButtons {
+    button:first-child {
+      font-size: 14px;
+    }
+  }
+}

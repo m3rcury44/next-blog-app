@@ -1,0 +1,16 @@
+@media (max-width: 450px) {
+  .createPostButton {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background: url("data:image/svg+xml,%3Csvg version='1.1' id='Uploaded to svgrepo.com' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 32 32' xml:space='preserve' fill='%2308A045'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Cstyle type='text/css'%3E .bentblocks_een%7Bfill:%2308A045;%7D %3C/style%3E%3Cpath class='bentblocks_een' d='M24,15v2h-7v7h-2v-7H8v-2h7V8h2v7H24z M24.485,24.485c-4.686,4.686-12.284,4.686-16.971,0 c-4.686-4.686-4.686-12.284,0-16.971c4.687-4.686,12.284-4.686,16.971,0C29.172,12.201,29.172,19.799,24.485,24.485z M23.071,8.929 c-3.842-3.842-10.167-3.975-14.142,0c-3.899,3.899-3.899,10.243,0,14.142c3.975,3.975,10.301,3.841,14.142,0 C26.97,19.172,26.97,12.828,23.071,8.929z'%3E%3C/path%3E%3C/g%3E%3C/svg%3E") no-repeat;
+
+    p {
+      display: none;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}

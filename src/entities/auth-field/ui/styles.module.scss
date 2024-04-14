@@ -1,0 +1,12 @@
+.errorMessage {
+  color: var(--red) !important;
+}
+
+@media (max-width: 450px) {
+  .errorMessage {
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    width: 100%;
+  }
+}

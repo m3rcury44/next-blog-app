@@ -1,0 +1,6 @@
+export * from './comment.interface'
+export * from './post.interface'
+export * from './search-params.interface'
+export * from './single-post.interface'
+export * from './user.interface'
+export * from './auth.interface'

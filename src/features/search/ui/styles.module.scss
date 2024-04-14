@@ -1,0 +1,92 @@
+.search {
+  position: absolute;
+  left: 37%;
+
+  form, form div {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  form {
+    div {
+      gap: 4px;
+      background-color: var(--text-color);
+      padding: 5px;
+      border-radius: 12px;
+      width: 300px;
+      transition: background-color var(--transition);
+
+      input {
+        padding: 5px;
+        background-color: transparent;
+        color: var(--background-color);
+        transition: color var(--transition);
+        width: 100%;
+      }
+
+      button {
+        margin-right: 6px;
+        height: 16px;
+        width: 16px;
+        padding: 0;
+
+        path {
+          transition: fill var(--transition);
+          fill: var(--background-color);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1360px) {
+  .search {
+    form {
+      div {
+        width: 250px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1240px) {
+  .search {
+    form {
+      div {
+        width: 200px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  .search {
+    margin: 0 auto;
+    position: static;
+  }
+}
+
+@media (max-width: 580px) {
+  .search {
+    margin: 0 0 0 auto;
+
+    form {
+      div {
+        width: 150px;
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .search {
+    margin: 0;
+
+    form {
+      div {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+.pagination {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    span {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      width: 40px;
+    }
+
+    button {
+      border-radius: 8px;
+      width: 40px;
+      height: 40px;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-color);
+      transition: background-color var(--transition), color var(--transition);
+    }
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 0;
+
+    path {
+      stroke: var(--text-color);
+    }
+
+    &[disabled] {
+      cursor: not-allowed;
+    }
+
+    &:last-child {
+      svg {
+        rotate: 180deg;
+      }
+    }
+  }
+}
+
+@media (hover: hover) {
+  .pagination div button:hover {
+    background-color: var(--text-color);
+    color: var(--background-color);
+  }
+}
+
+@media (hover: none) {
+  .pagination div button:active {
+    background-color: var(--text-color);
+    color: var(--background-color);
+  }
+}
+
+.activeBtn {
+  background-color: var(--text-color);
+  color: var(--background-color) !important;
+}
+
+@media (max-width: 690px) {
+  .pagination {
+    > button p {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .pagination {
+    div {
+      gap: 0;
+
+      button {
+        height: 30px;
+        width: 30px;
+      }
+
+      span {
+        height: 30px;
+        width: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .pagination {
+    div {
+      button {
+        height: 25px;
+        width: 25px;
+      }
+
+      span {
+        height: 25px;
+        width: 25px;
+      }
+    }
+  }
+}

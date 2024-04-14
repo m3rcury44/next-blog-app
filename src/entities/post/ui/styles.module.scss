@@ -1,0 +1,191 @@
+.post {
+  position: relative;
+  display: grid;
+  gap: 20px;
+
+  > span {
+    color: var(--purple);
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  p {
+    color: var(--post-text-color);
+  }
+
+  div, a {
+    display: flex;
+  }
+
+  a h2, p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 300px;
+    overflow: hidden;
+  }
+
+  a {
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+      align-items: center;
+      gap: 10px;
+
+      button:last-child {
+        height: 24px;
+        width: 24px;
+        padding: 0;
+
+        path {
+          stroke: var(--text-color);
+          transition: stroke var(--transition);
+        }
+      }
+    }
+  }
+
+  > div:last-child {
+    align-items: center;
+    gap: 20px;
+
+    span {
+      border-radius: 16px;
+      padding: 2px 10px;
+      background-color: var(--post-tag-background-color);
+      transition: background-color var(--transition);
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    span:nth-child(3n) {
+      color: #c11574;
+    }
+
+    span:nth-child(2n) {
+      color: #363f72;
+    }
+
+    span:not(:nth-child(2n)):not(:nth-child(3n)) {
+      color: var(--purple);
+    }
+  }
+}
+
+.postImageContainer {
+  height: 320px;
+  margin: 0 auto;
+
+  img {
+    height: inherit;
+    width: auto;
+    max-width: 100%;
+    justify-self: center;
+  }
+
+  &:not(:has(img, span)) {
+    align-items: center;
+    font-size: 5em;
+    font-weight: 600;
+    color: var(--text-color);
+    transition: color var(--transition);
+  }
+}
+
+@media (max-width: 1360px) {
+  .postImageContainer {
+    height: 240px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .postImageContainer {
+    height: 320px;
+  }
+}
+
+@media (max-width: 840px) {
+  .postImageContainer {
+    height: 280px;
+  }
+
+  .post {
+    > div:last-child {
+      white-space: nowrap;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    a h2, p {
+      width: 270px;
+    }
+  }
+}
+
+@media (max-width: 790px) {
+  .postImageContainer {
+    height: 250px;
+  }
+
+  .post {
+    a h2, p {
+      width: 200px;
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .postImageContainer {
+    height: 400px;
+  }
+
+  .post {
+    a h2, p {
+      width: 450px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .post {
+    a h2, p {
+      width: 350px;
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .postImageContainer {
+    height: 350px;
+  }
+
+  .post {
+    a h2, p {
+      width: 280px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .postImageContainer {
+    height: 250px;
+  }
+
+  .post {
+    a h2, p {
+      width: 220px;
+    }
+  }
+}
+
+@media (max-width: 390px) {
+  .postImageContainer {
+    height: 220px;
+  }
+
+  .post {
+    a h2, p {
+      width: 180px;
+    }
+  }
+}

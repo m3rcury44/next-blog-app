@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+ul, ol {
+  margin-block: 1em;
+  padding-inline-start: 40px;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  background-color: var(--background-color);
+  transition: background-color var(--transition);
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  transition: color var(--transition);
+  font-size: 16px;
+  padding: 10px 20px;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 40px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+
+  > main {
+    margin-block: 40px;
+  }
+}
+
+a {
+  color: var(--text-color);
+  transition: color var(--transition);
+}
+
+h1, h2, h3 {
+  color: var(--text-color);
+  transition: color var(--transition);
+}
+
+p {
+  transition: var(--transition);
+}
+
+img {
+  object-fit: cover;
+}
+
+:root {
+  --max-width: 1368px;
+  --text-color: #fff;
+  --background-color: #090d1f;
+  --input-text-color: #808080;
+  --post-text-color: #c0c5d0;
+  --post-tag-background-color: #f8f9fc;
+  --editor-border-color: #ced4da;
+  --green: #08A045;
+  --red: #de1e1e;
+  --purple: #6941c6;
+  --transition: .2s ease-in-out
+}
+
+.light {
+  --text-color: #000;
+  --background-color: #fff;
+  --post-text-color: #667085;
+  --post-tag-background-color: #d8dae1;
+  --editor-border-color: #a3a8ad;
+}
+
+.EasyMDEContainer .CodeMirror {
+  border: 1px solid var(--editor-border-color) !important;
+}
+
+.editor-toolbar {
+  border-top: 1px solid var(--editor-border-color) !important;
+  border-left: 1px solid var(--editor-border-color) !important;
+  border-right: 1px solid var(--editor-border-color) !important;
+
+  & i.separator {
+    border-left: 1px solid var(--editor-border-color) !important;
+  }
+}
+
+.EasyMDEContainer {
+  display: grid !important;
+  width: 100%;
+}
+
+.cm-s-custom {
+  background-color: var(--background-color) !important;
+  color: var(--text-color) !important;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+.CodeMirror-cursor {
+  border-left-color: var(--text-color) !important;
+}
+
+.editor-toolbar button.active, .editor-toolbar button:hover {
+  background-color: transparent !important;
+}
+
+.editor-toolbar.fullscreen, .editor-preview-side {
+  background-color: var(--background-color) !important;
+}
+
+.md-post {
+  &-p {
+    font-size: 1.1em;
+    margin-block: 20px;
+  }
+
+  &-h1, &-h2, &-h3 {
+    margin-block: 20px;
+  }
+
+  &-h1 {
+    font-size: 2.5em;
+  }
+
+  &-h2 {
+    font-size: 2em;
+  }
+
+  &-h3 {
+    font-size: 1.5em;
+  }
+
+  &-hr {
+    width: 200px;
+    height: 20px;
+    margin: 60px auto;
+    background: radial-gradient(circle closest-side, #d4d4d4 98%, #0000) 0/calc(100%/5) 100%;
+    border: none;
+  }
+}
+
+[aria-label="Close toast"] {
+  padding:0;
+}
+
+@media (max-width: 640px) {
+  .editor-toolbar {
+    white-space: nowrap;
+    width: 100%;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .CodeMirror-scroll {
+    min-height: 250px !important;
+  }
+}

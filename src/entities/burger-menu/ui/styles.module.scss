@@ -1,0 +1,111 @@
+.burgerMenuButton {
+  position: absolute;
+  z-index: 7;
+  display: none;
+  gap: 8px;
+  padding: 0;
+
+  span {
+    background-color: var(--text-color);
+    height: 2px;
+    width: 30px;
+    transition: background-color .1s ease-in-out, rotate .1s ease-in-out, opacity .1s ease-in-out;
+    transform-origin: left center;
+  }
+
+  &Active {
+    span {
+      background-color: var(--background-color);
+    }
+  }
+
+  &[aria-checked=true] {
+    span {
+      &:first-child {
+        rotate: 45deg;
+        translate: 0 -1px;
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:last-child {
+        rotate: -45deg;
+      }
+    }
+  }
+}
+
+.burgerMenu {
+  position: fixed;
+  z-index: 6;
+  inset: 0;
+  height: 100%;
+  transition: translate var(--transition);
+  background-color: transparent;
+  backdrop-filter: blur(2px);
+
+  aside {
+    width: max-content;
+    height: 100%;
+    background-color: var(--background-color);
+    transition: background-color var(--transition);
+
+    nav {
+      position: relative;
+      top: 120px;
+      padding-inline: 40px;
+
+      div {
+        margin-bottom: 30px;
+      }
+
+      ul {
+        display: grid;
+        gap: 30px;
+        justify-items: flex-start;
+      }
+    }
+  }
+}
+
+.fadeIn {
+  animation: fade-in .2s ease-in-out;
+}
+
+.fadeOut {
+  animation: fade-out .2s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  from {
+    translate: -100vw;
+  }
+
+  to {
+    translate: 0;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    translate: 0;
+  }
+
+  to {
+    translate: -100vw;
+  }
+}
+
+@media (max-width: 1140px) {
+  .burgerMenuButton {
+    display: grid;
+  }
+}
+
+@media (max-width: 450px) {
+  .burgerMenuButton {
+    position: static;
+  }
+}
